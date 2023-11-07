@@ -1,6 +1,7 @@
 import UserForm from '../../component/UserForm/UserForm';
 import {useState} from 'react';
 import {User} from '../../type';
+import Users from '../../component/Users/Users';
 
 const App = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -16,6 +17,9 @@ const App = () => {
         <div className="row mt-3">
           <div className="col-6">
             <UserForm onSubmit={addUser}/>
+          </div>
+          <div className="col-6">
+            <Users/>
           </div>
         </div>
       </main>
