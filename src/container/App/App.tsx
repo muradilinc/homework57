@@ -19,7 +19,7 @@ const App = () => {
             <UserForm onSubmit={addUser}/>
           </div>
           <div className="col-6">
-            <Users/>
+            <Users users={users}/>
           </div>
         </div>
       </main>

@@ -46,6 +46,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           onChange={changeUser}
           id="name"
           placeholder="Name"
+          required
           className="form-control"
         />
       </div>
@@ -57,6 +58,7 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           onChange={changeUser}
           id="email"
           placeholder="Email"
+          required
           className="form-control"
         />
       </div>
@@ -73,7 +75,6 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
         </div>
       </div>
       <div className="form-group mt-3">
-        <label htmlFor="role">Open this select role</label>
         <select
           className="form-select"
           aria-label="Default select example"
@@ -81,7 +82,9 @@ const UserForm: React.FC<Props> = ({onSubmit}) => {
           id="role"
           value={user.role}
           onChange={changeUser}
+          required
         >
+          <option value="">Open this select role</option>
           <option value="user">User</option>
           <option value="editor">Editor</option>
           <option value="admin">Admin</option>
