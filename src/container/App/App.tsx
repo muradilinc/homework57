@@ -1,15 +1,36 @@
-import UserForm from '../../component/UserForm/UserForm';
 import {useState} from 'react';
-import {User} from '../../type';
+import UserForm from '../../component/UserForm/UserForm';
 import Users from '../../component/Users/Users';
+import {User} from '../../type';
 
 const App = () => {
-  const [users, setUsers] = useState<User[]>([]);
+  const [users, setUsers] = useState<User[]>([
+    {
+      id: '1',
+      name: 'Muradil',
+      email: 'muradil@gmail.com',
+      active: false,
+      role: 'admin'
+    },
+    {
+      id: '2',
+      name: 'Rika',
+      email: 'muradil@gmail.com',
+      active: true,
+      role: 'user'
+    },
+    {
+      id: '3',
+      name: 'Soup',
+      email: 'muradil@gmail.com',
+      active: true,
+      role: 'editor'
+    }
+  ]);
 
   const addUser = (user: User) => {
     setUsers(prevState => [...prevState, user]);
   };
-  console.log(users);
 
   return (
     <>
